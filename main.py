@@ -1,4 +1,6 @@
 import pdfplumber
+import os
+import streamlit as st
 from langgraph.graph import START,END,StateGraph
 from langgraph.graph.message import add_messages
 from typing import Annotated,TypedDict,Any
@@ -8,7 +10,8 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
 from langchain_core.messages import HumanMessage,AIMessage,SystemMessage
 load_dotenv()
-llm = ChatGoogleGenerativeAI(model="gemini-flash-latest")
+api_key=os.getenv("google_api_key") or st.secrets["google_api_key"]
+llm = ChatGoogleGenerativeAI(model="gemini-flash-latest",google_api_key=api_key)
 class review_type(BaseModel):
     score:int
     approved:bool
