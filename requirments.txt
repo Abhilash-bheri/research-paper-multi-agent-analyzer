@@ -1,1 +1,9 @@
+streamlit
+langchain
+langchain-core
+langchain-google-genai
+langgraph
 pdfplumber
+python-dotenv
+pydantic
+typing_extensions
