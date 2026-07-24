@@ -10,7 +10,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from dotenv import load_dotenv
 from langchain_core.messages import HumanMessage,AIMessage,SystemMessage
 load_dotenv()
-api_key=os.getenv("google_api_key") or st.secrets["google_api_key"]
+api_key=st.secrets["google_api_key"]
 llm = ChatGoogleGenerativeAI(model="gemini-flash-latest",google_api_key=api_key)
 class review_type(BaseModel):
     score:int
