@@ -91,7 +91,7 @@ if st.button("🚀 Analyze Research Paper"):
 
     st.divider()
 
-    st.header("📑 Final Research Brief")
+    st.header("📑 Final Research Brief ")
 
     report = result.get("final_res", "")
 
