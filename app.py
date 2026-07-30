@@ -95,7 +95,7 @@ if st.button("🚀 Analyze Research Paper"):
 
     report = result.get("final_res", "")
 
-    # Convert different return formats to plain text
+  
     if isinstance(report, str):
         final_report = report
 
